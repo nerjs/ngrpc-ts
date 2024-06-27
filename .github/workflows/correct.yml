@@ -1,0 +1,42 @@
+name: Checking the correctness of files
+
+on:
+  push:
+    branches: 
+      - master
+      - main
+      - develop
+jobs:
+  try-build:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+          - 20
+        os: 
+          - ubuntu-latest
+          - ubuntu-20.04
+    runs-on:  ${{ matrix.os }}
+    name: Run linter, tests and Trying to build [os:${{ matrix.os }}; node:${{ matrix.node-version }}]
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Dependencies installation
+        run: npm install
+      - name: check versions
+        run: |
+          node -v
+          npm -v
+      - name: run linter
+        run: npm run lint
+      - name: run tests in development env
+        run: npm run test -- --bail=2 --ci --coverage=true --runInBand --coverageReporters=text
+      - name: run tests in production env
+        run: NODE_ENV=production npm run test -- --bail=2 --ci --coverage=false --runInBand
+      - name: run build
+        run: npm run build

@@ -1,0 +1,32 @@
+{
+  "name": "ngrpc-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@grpc/grpc-js": "1.10.10",
+    "@grpc/proto-loader": "0.7.13",
+    "@types/debug": "4.1.8",
+    "@types/jest": "29.5.2",
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "@typescript-eslint/parser": "5.47.0",
+    "eslint": "8.23",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "jest": "29.5.0",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.8",
+    "ts-jest": "29.0.3",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "@types/node": "20.2.5",
+    "debug": "4.3.4"
+  }
+}
