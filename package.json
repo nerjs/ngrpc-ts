@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "clear": "rm -rf ./dist",
+    "build": "tsc --build",
+    "watch": "tsc --watch",
+    "start": "nodemon --enable-source-maps --trace-warnings ./dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
   },
   "keywords": [],
   "author": "",
