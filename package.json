@@ -12,7 +12,7 @@
   "devDependencies": {
     "@grpc/grpc-js": "1.10.10",
     "@grpc/proto-loader": "0.7.13",
-    "@types/debug": "4.1.8",
+    "@types/debug": "4.1.12",
     "@types/jest": "29.5.2",
     "@typescript-eslint/eslint-plugin": "5.47.0",
     "@typescript-eslint/parser": "5.47.0",
@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "@types/node": "20.2.5",
-    "debug": "4.3.4"
+    "debug": "4.3.5"
   }
 }
