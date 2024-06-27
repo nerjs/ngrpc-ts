@@ -34,6 +34,6 @@
   },
   "dependencies": {
     "@types/node": "20.2.5",
-    "debug": "4.3.4"
+    "debug": "4.3.5"
   }
 }
